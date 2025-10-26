@@ -7,16 +7,16 @@ It provides an interactive environment similar to CodePen or JSpin, designed to 
 
 ✨ Features Implemented in This Frontend Version: 
 
-•	Separate editor panels for HTML, CSS, and JavaScript. 
-•	Output panel to display rendered results in real time. 
-•	Console panel to show logs and errors. 
-•	Run, Reset, and Clear buttons for easy control. 
-•	Live preview feature (auto-run while typing). 
-•	Resizable split layout for flexible workspace. 
-•	Line numbering for better readability. 
-•	User authentication pages (Signup, Login, Logout, Profile). 
-•	Snippet management UI to save, edit, delete, and view code snippets. 
-•	Search and filter options for managing saved snippets.
+-	Separate editor panels for HTML, CSS, and JavaScript. 
+-	Output panel to display rendered results in real time. 
+-	Console panel to show logs and errors. 
+-	Run, Reset, and Clear buttons for easy control. 
+-	Live preview feature (auto-run while typing). 
+-	Resizable split layout for flexible workspace. 
+-	Line numbering for better readability. 
+-	User authentication pages (Signup, Login, Logout, Profile). 
+-	Snippet management UI to save, edit, delete, and view code snippets. 
+-	Search and filter options for managing saved snippets.
 
 🔮 Future Improvements (Backend Integration): 
 
