@@ -20,10 +20,10 @@ It provides an interactive environment similar to CodePen or JSpin, designed to 
 
 🔮 Future Improvements (Backend Integration): 
 
-•	Connect to a backend using Node.js and Express.js for storing user data and code snippets in MongoDB. 
-•	JWT-based authentication for secure login and session management. 
-•	Persistent snippet storage, allowing users to access their saved code anytime. 
-•	User dashboard API integration to display personalized snippets. 
-•	Error logging and analytics for better debugging support. 
-•	Snippet sharing and collaboration features for users to work together.
+- Connect to a backend using Node.js and Express.js for storing user data and code snippets in MongoDB. 
+-	JWT-based authentication for secure login and session management. 
+-	Persistent snippet storage, allowing users to access their saved code anytime. 
+-	User dashboard API integration to display personalized snippets. 
+-	Error logging and analytics for better debugging support. 
+-	Snippet sharing and collaboration features for users to work together.
 
