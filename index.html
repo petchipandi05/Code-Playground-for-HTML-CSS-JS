@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>CodeEditor</h1>
+        </div>
+        <div class="user-actions">
+            <div class="snippet-actions">
+                <input type="text" id="snippet-title" placeholder="Untitled Snippet">
+                <button id="save-btn"><i class="fas fa-save"></i> Save</button>
+            </div>
+            <div class="auth-actions">
+                <a href="dashboard.html" id="dashboard-link" class="hidden"><i class="fas fa-th-large"></i> Dashboard</a>
+                <a href="profile.html" id="profile-link" class="hidden"><i class="fas fa-user"></i> Profile</a>
+                <button id="login-btn"><i class="fas fa-sign-in-alt"></i> Login</button>
+                <button id="signup-btn"><i class="fas fa-user-plus"></i> Sign Up</button>
+                <button id="logout-btn" class="hidden"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="editor-container">
+            <div class="editor-panel">
+                <div class="editor-tabs">
+                    <button class="tab-btn active" data-tab="html">HTML</button>
+                    <button class="tab-btn" data-tab="css">CSS</button>
+                    <button class="tab-btn" data-tab="js">JavaScript</button>
+                </div>
+                <div class="editor-actions">
+                    <button id="run-btn" title="Run Code"><i class="fas fa-play"></i></button>
+                    <button id="reset-btn" title="Reset Code"><i class="fas fa-undo"></i></button>
+                    <button id="clear-btn" title="Clear Code"><i class="fas fa-trash"></i></button>
+                    <div class="live-toggle">
+                        <input type="checkbox" id="live-preview" checked>
+                        <label for="live-preview">Live Preview</label>
+                    </div>
+                </div>
+                <div class="editors">
+                    <div id="html-editor" class="code-editor active">
+                        <div class="line-numbers"></div>
+                        <textarea id="html-code" spellcheck="false" placeholder="Enter HTML code here..."></textarea>
+                    </div>
+                    <div id="css-editor" class="code-editor">
+                        <div class="line-numbers"></div>
+                        <textarea id="css-code" spellcheck="false" placeholder="Enter CSS code here..."></textarea>
+                    </div>
+                    <div id="js-editor" class="code-editor">
+                        <div class="line-numbers"></div>
+                        <textarea id="js-code" spellcheck="false" placeholder="Enter JavaScript code here..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="output-container">
+                <div class="output-tabs">
+                    <button class="output-tab active" data-output="preview">Preview</button>
+                    <button class="output-tab" data-output="console">Console</button>
+                </div>
+                <div class="output-panel active" id="preview-panel">
+                    <iframe id="output-iframe"></iframe>
+                </div>
+                <div class="output-panel" id="console-panel">
+                    <div class="console-wrapper">
+                        <div id="console-output"></div>
+                    </div>
+                    <button id="clear-console"><i class="fas fa-trash"></i> Clear Console</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="save-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Save Snippet</h2>
+            <form id="save-form">
+                <div class="form-group">
+                    <label for="modal-snippet-title">Title</label>
+                    <input type="text" id="modal-snippet-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="snippet-description">Description</label>
+                    <textarea id="snippet-description" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="snippet-tags">Tags (comma separated)</label>
+                    <input type="text" id="snippet-tags" placeholder="html, css, javascript">
+                </div>
+                <button type="submit" class="btn-primary">Save Snippet</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/editor.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/snippets.js"></script>
+</body>
+</html>
